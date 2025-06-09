@@ -1,6 +1,0 @@
-unique_name: m_users
-object_type: metric
-label: M Users
-calculation_method: sum
-column: colum name
-dataset: users

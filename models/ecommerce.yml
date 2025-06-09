@@ -3,17 +3,8 @@ object_type: model
 label: ecommerce
 dimensions: []
 metrics:
-  - unique_name: m_users
-  - unique_name: m_users_id_dc
   - unique_name: m_products_count
 relationships:
-  - unique_name: empty_dataset_items_dimension
-    from:
-      dataset: ''
-      join_columns: []
-    to:
-      dimension: items_dimension
-      level: ''
   - unique_name: order_items_id_to_order_items_dimension_order_items_id
     from:
       dataset: order_items
