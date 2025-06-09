@@ -1,0 +1,14 @@
+unique_name: distribution_centers
+object_type: dataset
+label: distribution_centers
+columns:
+  - name: id
+    data_type: long
+  - name: name
+    data_type: string
+  - name: latitude
+    data_type: double
+  - name: longitude
+    data_type: double
+connection_id: con_sbx-da_Looker_ecommerce
+table: distribution_centers

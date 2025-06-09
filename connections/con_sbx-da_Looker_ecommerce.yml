@@ -1,0 +1,6 @@
+unique_name: con_sbx-da_Looker_ecommerce
+object_type: connection
+label: con_sbx-da_Looker_ecommerce
+as_connection: Bigquery
+database: sbx-da
+schema: Looker_ecommerce

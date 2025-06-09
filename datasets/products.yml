@@ -1,0 +1,24 @@
+unique_name: products
+object_type: dataset
+label: products
+columns:
+  - name: id
+    data_type: long
+  - name: cost
+    data_type: double
+  - name: category
+    data_type: string
+  - name: name
+    data_type: string
+  - name: brand
+    data_type: string
+  - name: retail_price
+    data_type: double
+  - name: department
+    data_type: string
+  - name: sku
+    data_type: string
+  - name: distribution_center_id
+    data_type: long
+connection_id: con_sbx-da_Looker_ecommerce
+table: products
