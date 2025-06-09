@@ -1,0 +1,37 @@
+unique_name: products_dimension
+object_type: dimension
+label: products_dimension
+hierarchies:
+  - unique_name: items_dimension Hierarchy
+    label: items_dimension Hierarchy
+    levels:
+      - unique_name: products category
+      - unique_name: Product Name
+      - unique_name: id
+level_attributes:
+  - unique_name: id
+    label: id
+    contains_unique_names: true
+    dataset: products
+    is_unique_key: true
+    key_columns:
+      - id
+    name_column: id
+  - unique_name: Product Name
+    label: Product Name
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - name
+    name_column: name
+  - unique_name: products category
+    label: products category
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - category
+    name_column: category
+relationships: []
+type: standard

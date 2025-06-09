@@ -1,0 +1,88 @@
+unique_name: ecommerce
+object_type: model
+label: ecommerce
+dimensions: []
+metrics:
+  - unique_name: m_users
+  - unique_name: m_users_id_dc
+  - unique_name: m_products_count
+relationships:
+  - unique_name: empty_dataset_items_dimension
+    from:
+      dataset: ''
+      join_columns: []
+    to:
+      dimension: items_dimension
+      level: ''
+  - unique_name: order_items_id_to_order_items_dimension_order_items_id
+    from:
+      dataset: order_items
+      join_columns:
+        - id
+    to:
+      dimension: order_items_dimension
+      level: order_items_id
+  - unique_name: order_items_product_id_to_products_dimension_id
+    from:
+      dataset: order_items
+      join_columns:
+        - product_id
+    to:
+      dimension: products_dimension
+      level: id
+  - unique_name: inventory_items_id_to_order_items_dimension_order_items_dimension Level
+    from:
+      dataset: inventory_items
+      join_columns:
+        - id
+    to:
+      dimension: order_items_dimension
+      level: order_items_dimension Level
+  - unique_name: products_id_to_order_items_dimension_product_id
+    from:
+      dataset: products
+      join_columns:
+        - id
+    to:
+      dimension: order_items_dimension
+      level: product_id
+  - unique_name: products_id_to_products_dimension_id
+    from:
+      dataset: products
+      join_columns:
+        - id
+    to:
+      dimension: products_dimension
+      level: id
+  - unique_name: users_id_to_users_dimension_users_dimension Level
+    from:
+      dataset: users
+      join_columns:
+        - id
+    to:
+      dimension: users_dimension
+      level: users_dimension Level
+  - unique_name: users_id_to_order_items_dimension_users Hierarchy Level
+    from:
+      dataset: users
+      join_columns:
+        - id
+    to:
+      dimension: order_items_dimension
+      level: users Hierarchy Level
+  - unique_name: order_items_user_id_to_order_items_dimension_users Hierarchy Level
+    from:
+      dataset: order_items
+      join_columns:
+        - user_id
+    to:
+      dimension: order_items_dimension
+      level: users Hierarchy Level
+  - unique_name: order_items_inventory_item_id_to_users_dimension_users_dimension Level
+    from:
+      dataset: order_items
+      join_columns:
+        - inventory_item_id
+    to:
+      dimension: users_dimension
+      level: users_dimension Level

@@ -1,0 +1,18 @@
+unique_name: users_dimension
+object_type: dimension
+label: users_dimension
+hierarchies:
+  - unique_name: users_dimension Hierarchy
+    label: users_dimension Hierarchy
+    levels:
+      - unique_name: users_dimension Level
+level_attributes:
+  - unique_name: users_dimension Level
+    label: users_dimension Level
+    contains_unique_names: true
+    dataset: users
+    is_unique_key: true
+    key_columns:
+      - id
+    name_column: id
+type: standard

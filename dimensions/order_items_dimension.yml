@@ -1,0 +1,55 @@
+unique_name: order_items_dimension
+object_type: dimension
+label: order_items_dimension
+hierarchies:
+  - unique_name: order_items Hierarchy
+    label: order_items Hierarchy
+    levels:
+      - unique_name: order_items_id
+  - unique_name: products_dimension Hierarchy
+    label: products_dimension Hierarchy
+    levels:
+      - unique_name: product_id
+  - unique_name: inventory_item_Hierarchy
+    label: inventory_item_Hierarchy
+    levels:
+      - unique_name: order_items_dimension Level
+  - unique_name: users Hierarchy
+    label: users Hierarchy
+    levels:
+      - unique_name: users Hierarchy Level
+level_attributes:
+  - unique_name: order_items_id
+    label: order_items_id
+    contains_unique_names: true
+    dataset: order_items
+    is_unique_key: true
+    key_columns:
+      - id
+    name_column: id
+  - unique_name: product_id
+    label: product_id
+    contains_unique_names: false
+    dataset: order_items
+    is_unique_key: false
+    key_columns:
+      - product_id
+    name_column: product_id
+  - unique_name: order_items_dimension Level
+    label: order_items_dimension Level
+    contains_unique_names: false
+    dataset: order_items
+    is_unique_key: false
+    key_columns:
+      - inventory_item_id
+    name_column: inventory_item_id
+  - unique_name: users Hierarchy Level
+    label: users Hierarchy Level
+    contains_unique_names: false
+    dataset: order_items
+    is_unique_key: false
+    key_columns:
+      - user_id
+    name_column: user_id
+relationships: []
+type: standard

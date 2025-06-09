@@ -1,0 +1,7 @@
+unique_name: m_products_count
+object_type: metric
+label: Products Count
+description: Number of Products
+calculation_method: count distinct
+column: sku
+dataset: products

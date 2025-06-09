@@ -1,0 +1,7 @@
+unique_name: m_users_id_dc
+object_type: metric
+label: M Users
+description: number of users
+calculation_method: count distinct
+column: id
+dataset: users
